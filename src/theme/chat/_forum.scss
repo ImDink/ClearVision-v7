@@ -50,7 +50,7 @@
   &#{c(pages tags selected)} {
     background: cv('color.main');
     border-color: cv('color.main');
-    color: var(--interactive-active);
+    color: var(--interactive-text-active);
     &:not(#{c(pages tags disabled)}) {
       &:hover {
         background: cv('color.hover');
@@ -101,30 +101,17 @@
 }
 #{c(forums chat header icon)} {
   path {
-    fill: var(--header-primary);
+    fill: var(--interactive-icon-active);
   }
 }
 #{c(forums chat bar container)} {
   background: transparent;
   border: none;
 }
-#{c(forums chat bar active)} {
-  color: cv('color.main');
-}
 
 // EMPTY
 #{c(forums empty)} {
   background: transparent;
-}
-#{c(forums emptyIcon)} {
-  background: cv('color.main');
-  color: var(--header-primary);
-}
-#{c(forums emptyCTA)} {
-  color: cv('color.main');
-  &:hover {
-    color: cv('color.hover');
-  }
 }
 
 // CARD LOADING

@@ -6,10 +6,5 @@
 
 // ACCOUNT LIST
 #{c(login accountsList)} {
-  background-color: cv('shading.cardInner');
-}
-
-// ADD ACCOUNT
-#{c(login addAccountNav)} {
-  background-color: transparent;
+  background-color: cv('shading.cardAlt');
 }

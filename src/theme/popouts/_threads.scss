@@ -10,10 +10,10 @@
 
 // CARD
 #{c(popouts threads listItem)} {
-  background: cv('shading.cardInner');
+  background: cv('shading.cardAlt');
   border: 2px solid transparent;
   &:hover {
-    background: cv('shading.cardInner');
+    background: cv('shading.cardAlt');
     border: 2px solid cv('color.hover');
   }
 }
@@ -21,7 +21,7 @@
 // EMPTY
 #{c(popouts threads emptyIcon)} {
   background: cv('color.main');
-  color: var(--header-primary);
+  color: var(--interactive-icon-active);
 }
 
 // HOVER CHANNEL POPOUT

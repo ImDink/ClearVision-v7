@@ -1,7 +1,8 @@
 @use 'backend' as *;
 
 
-#{c(shop scroller)},
+#{c(shop scroll)},
+#{c(shop featuredScroll)},
 #{c(shop page)} {
   background: transparent;
 }
@@ -10,6 +11,9 @@
 }
 #{c(shop featured)} {
   background: transparent;
+}
+#{c(shop divider)} {
+  margin-top: 0;
 }
 
 // CARD
@@ -20,25 +24,42 @@
     border-color: cv('color.main');
   }
 }
-#{c(shop cardText)} {
-  background: transparent;
-  border: none;
-}
 
 // LOADING
 #{c(shop loadingCardSkeleton)},
 #{c(shop loadingFeaturedSkeleton)} {
-  background: var(--hsl-card-shading-inverted);
+  background: cv('shading.card');
 }
-#{c(shop loadingCardBody)},
-#{c(shop loadingFeaturedBody)} {
-  background: var(--hsl-card-shading-inverted);
+#{c(main options fullMotion)} {
+  #{c(shop loadingCardSkeletonAnimation)},
+  #{c(shop loadingFeaturedSkeleton)} {
+    animation: cv-card-loading 1.5s infinite ease-in-out;
+  }
 }
-#{c(shop loadingCardContent)} {
+#{c(shop loadingCardText)},
+#{c(shop loadingFeaturedLogo)} {
+  background: cv('shading.cardAlt');
+}
+
+// FILTER
+#{c(shop filterBar)} {
   background: transparent;
+}
+#{c(shop filterColorToggled)} {
+  outline-color: cv('color.main');
+}
+#{c(shop filterThemeToggled)} {
+  background: cv('shading.card');
+  border-color: cv('color.main');
 }
 
 // PREVIEW
 #{c(shop previewInfo)} {
   background: transparent;
+}
+
+// orb drop down modal
+#{c(shop orbCard)} {
+  background: cv('shading.card');
+  border: 2px solid cv('color.main');
 }

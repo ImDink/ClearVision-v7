@@ -72,7 +72,7 @@ $cv: (
       percent: var(--background-shading-percent),
       // shading amount
       card: var(--hsl-card-shading),
-      cardInner: var(--background-mod-subtle),
+      cardAlt: var(--background-mod-subtle),
       // mainly used for embeds, most modals, random things
       popout: var(--hsl-popout-shading),
       modal: var(--hsl-modal-shading),
@@ -87,8 +87,8 @@ $cv: (
   text: (
       normal: var(--text-default),
       muted: var(--text-muted),
-      primary: var(--text-primary),
-      secondary: var(--text-secondary),
+      strong: var(--text-strong),
+      interactive: var(--interactive-text-normal),
     ),
 
   // FONT

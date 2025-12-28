@@ -11,7 +11,7 @@
 }
 #{c(chat botTag)} {
   background: cv('color.main');
-  color: var(--header-primary);
+  color: cv('text.strong');
 }
 
 // EDITING
@@ -29,10 +29,13 @@
 }
 
 // CODEBLOCK
+#{c(hljs hljs)} {
+  background: cv('shading.card');
+  border: 1px solid var(--border-normal);
+}
 #{c(chat markup)} {
   code {
     background: cv('shading.card');
-    border: 1px solid var(--hsl-card-shading-inverted);
     // INLINE
     &#{c(chat codeInline)} {
       border:none;
@@ -105,6 +108,7 @@
 #{c(chat mentioned)} {
   --background-mentioned: hsl(from var(--hsl-main-color) h s l/.1);
   --background-mentioned-hover: hsl(from var(--hsl-hover-color) h s l/.1);
+  background: var(--background-mentioned);
   &:before {
     background-color: cv('color.main');
   }
@@ -133,12 +137,6 @@
 // EMBED DOWNLOAD BUTTON
 #{c(embeds hoverButton group)} {
   background: cv('shading.popout');
-}
-#{c(embeds hoverButton button)} {
-  &#{c(embeds hoverButton selected)},
-  &:hover {
-    background: transparent;
-  }
 }
 
 // ATTACHMENTS
@@ -203,9 +201,13 @@
 #{c(embeds textContainer languageSelectorPopout)} {
   background: cv('shading.popout');
 }
-#{c(embeds textContainer modalTextContainer)} {
+// TEXT CONTAINER MODAL 
+#{c(embeds textContainer modal textContainer)} {
   background: transparent;
   border: none;
+}
+#{c(embeds textContainer modal content)} #{c(embeds textContainer codeView)} {
+  background: transparent;
 }
 
 // HAS THREAD
@@ -257,6 +259,7 @@
 
 // AUTOMOD
 #{c(embeds automod card)},
+#{c(embeds automod card)}#{c(embeds automod selected)},
 #{c(embeds automod footerContainer)} {
   background: cv('shading.card');
 }
@@ -275,10 +278,6 @@
   #{c(embeds poll answerInner)}#{c(embeds poll currentlyVoting)}#{c(embeds poll selected)} {
     outline: 1px solid cv('color.main');
   }
-}
-#{c(embeds poll secondaryButtonPresentation)} {
-  background: cv('color.main');
-  border: transparent;
 }
 #{c(embeds poll checkbox)} {
   border-width: 1px;
