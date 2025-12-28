@@ -22,16 +22,10 @@
   background: cv('color.main');
 }
 #{c(thread icon)} path {
-  fill: var(--header-primary);
+  fill: var(--interactive-icon-active);
 }
 
 // NOTICE
 #{c(thread header)} {
   background-color: cv('shading.popout');
-}
-
-// ACTIVE THREADS
-#{c(thread activethreadsContainer)},
-#{c(thread activethreadsHeader)} {
-  background: transparent;
 }

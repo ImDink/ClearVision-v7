@@ -42,18 +42,33 @@
     #{c(profile inner)} {
       background: transparent;
     }
-
-    // STATUS BUBBLE
-    #{c(profile statusBubbleOuter)} {
-      background: cv('shading.popout');
-    }
-    #{c(profile statusBubbleInner)} {
-      background: transparent;
-    }
   }
 }
 #{c(profile overlay)} {
   background-color: cv('shading.card');
+}
+
+// STATUS
+#{c(profile outer)}:not(#{c(profile customTheme)}) {
+  #{c(profile status outer)} {
+    background: cv('shading.popout');
+  }
+  #{c(profile status inner)} {
+    background: transparent;
+  }
+}
+#{c(profile status outer)} {
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+#{c(profile status tooltip)} {
+  background: cv('shading.popout');
+  box-shadow: none;
+}
+#{c(profile status caretIcon)} #{c(profile status caretFill)} {
+  fill: cv('shading.popout');
 }
 
 // POPOUT SEND MESSAGE
@@ -86,15 +101,10 @@
     }
   }
 }
-#{c(profile statusBubbleOuter)} {
-  &::before,
-  &::after {
-    display: none;
-  }
-}
 
 // NITRO PROFILE MODAL
 #{c(profile customTheme)} {
+  
   // TABS
   #{c(tab top)} {
     #{c(tab item)} {
@@ -104,25 +114,29 @@
       }
     }
   }
+
+  // BUTTONS
+  #{c(button new primary)} {
+    background-color: var(--control-background-primary-default);
+    border-color: var(--control-border-primary-default);
+  }
+  #{c(button new secondary)} {
+    background-color: var(--control-background-secondary-default);
+    border-color: var(--control-border-secondary-default);
+  }
+
   // SCROLLBAR
   ::-webkit-scrollbar-thumb {
     background-color: var(--profile-gradient-primary-color);
   }
+
   // NOTE
   #{c(profile modal noteTextarea)} {
     background: var(--user-profile-note-background-focus);
-    &:focus {
+    &:focus,
+    &:focus:hover {
       border-color: var(--profile-gradient-primary-color);
       background: var(--user-profile-note-background-focus);
-    }
-  }
-  // BUTTONS
-  &:is(#{c(main themeLight)}, #{c(main themeDark)}) {
-    #{c(profile button themeColor)} {
-      &#{c(profile button secondary)} {
-        background: var(--profile-gradient-button-color);
-        color: var(--button-filled-brand-text);
-      }
     }
   }
 }

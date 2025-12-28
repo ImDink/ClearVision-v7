@@ -9,15 +9,6 @@
   background: transparent;
 }
 #{c(popouts pins messageGroup)} {
-  background: cv('shading.cardInner');
+  background: cv('shading.cardAlt');
   border: none;
-}
-#{c(popouts pins jumpButton)} {
-  background: cv('color.main');
-  border-color: transparent;
-  color: var(--interactive-active);
-  &:hover {
-    background: cv('color.hover');
-    color: var(--interactive-active);
-  }
 }

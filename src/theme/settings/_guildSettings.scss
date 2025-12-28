@@ -52,7 +52,7 @@
 }
 #{c(guildSettings roles defaultPermsIcon)} {
   background: cv('color.main');
-  color: var(--interactive-active);
+  color: var(--interactive-text-active);
 }
 #{c(guildSettings roles circleButton)} {
   margin-left: 10px;
@@ -92,7 +92,7 @@
 }
 #{c(guildSettings access joinOptionContent)} {
   &#{c(guildSettings access joinOptionActive)} {
-    background: cv('shading.cardInner');
+    background: cv('shading.cardAlt');
   }
 }
 
@@ -134,7 +134,7 @@
   border: none;
 }
 #{c(guildSettings automod contentContainer)} {
-  background: cv('shading.cardInner');
+  background: cv('shading.cardAlt');
 }
 #{c(guildSettings automod keywordsTextArea)} {
   background: cv('shading.input.bg');
@@ -146,7 +146,7 @@
 }
 #{c(guildSettings automod pillContainer)},
 #{c(guildSettings automod stepIcon)} {
-  background: cv('shading.cardInner');
+  background: cv('shading.cardAlt');
 }
 #{c(guildSettings automod stepperContainer)} {
   background: transparent;
@@ -192,16 +192,10 @@
   background: cv('shading.card');
 }
 #{c(guildSettings subs avatarCard)} {
-  background: cv('shading.cardInner');
+  background: cv('shading.cardAlt');
 }
 #{c(guildSettings subs avatarConnector)} {
-  border-color: cv('shading.cardInner') !important;
-}
-#{c(guildSettings subs viewServerButton)} {
-  background: cv('color.main');
-  &:hover {
-    background: cv('color.hover');
-  }
+  border-color: cv('shading.cardAlt') !important;
 }
 
 // SERVER BOOST
